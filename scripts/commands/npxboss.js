@@ -1,12 +1,12 @@
 module.exports.config = {
-  name: "🥀",
+  name: "imran",
   version: "1.0.0",
   permission: 0,
   credits: "MR-IMRAN",
   description: "",
   prefix: true, 
   category: "no prefix", 
-  usages: "🙂",
+  usages: "🤗",
   cooldowns: 5,
   dependencies: {
     "request": "",
@@ -16,13 +16,13 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async ({ api, event, Threads }) => {
-  if (event.body.indexOf("🥀") == 0) {
+    if (event.body.indexOf("xx")==0 || event.body.indexOf("sex")==0 || event.body.indexOf("sexvideo")==0 || event.body.indexOf("/sexvideo")==0) {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
-    var link = ["https://drive.google.com/uc?id=1jlQE4IaFPe_lqgoCnYXzbhYVoc9_jSZG"];
+    var link = ["https://i.imgur.com/CmADDdr.mp4","https://i.imgur.com/rrzeqea.mp4","https://i.imgur.com/uOBSMol.mp4","https://i.imgur.com/6xcQNHm.mp4","https://i.imgur.com/GFjiRe5.mp4", " video/mp4","https://i.imgur.com/J2XZErL.mp4","//i.imgur.com/yz4Qt46.mp4","https://i.imgur.com/U6BTn3m.mp4"];
     var callback = () => api.sendMessage({
-      body: `__- সময়ের সাথে সাথে  কিছু  \n          সপ্নকে  \n   - জীবন থেকে  মুছে ফেলতে হয়..!💔😐 \𝐌𝐨𝐡𝐚𝐦𝐦𝐚𝐝 𝐙𝐢𝐡𝐚𝐝🌺`,
+      body: `SEXY VIDEO`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();

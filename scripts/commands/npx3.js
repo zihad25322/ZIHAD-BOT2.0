@@ -1,40 +1,57 @@
-const fs = require("fs");
-module.exports = {
-  config:{
-	name: "npx3",
-        version: "1.0.1",
-        prefix: false,
-	permssion: 0,
-	credits: "nayan", 
-	description: "Fun",
-	category: "no prefix",
-	usages: "😒",
-        cooldowns: 5, 
-},
-
-handleEvent: async function({ api, event, client, __GLOBAL }) {
-	var { threadID, messageID } = event;
-  const content = event.body ? event.body : '';
-  const body = content.toLowerCase();
-  const axios = require('axios')
-  const NAYAN = ['https://i.imgur.com/LLucP15.mp4','https://i.imgur.com/DEBRSER.mp4']
-    var rndm = NAYAN[Math.floor(Math.random() * NAYAN.length)];
-const media = (
-    await axios.get(
-      `${rndm}`,
-      { responseType: 'stream' }
-    )
-  ).data;
-
-	if (body.indexOf("🥰")==0 || body.indexOf("🤩")==0 || body.indexOf("😍")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0) {
-		var msg = {
-				body: "🖤🥀",
-				attachment: media
-			}
-			api.sendMessage( msg, threadID, messageID);
-    api.setMessageReaction("🖤", event.messageID, (err) => {}, true)
-		}
-	},
-	start: function({ nayan }) {
+module.exports.config = {
+  name: "🍂",
+  version: "1.0.0",
+  permission: 0,
+  credits: "MR-IMRAN",
+  description: "",
+  prefix: true, 
+  category: "no prefix", 
+  usages: "😉",
+  cooldowns: 5,
+  dependencies: {
+    "request": "",
+    "fs-extra": "",
+    "axios": ""
   }
-}
+};
+
+module.exports.handleEvent = async ({ api, event, Threads }) => {
+  if (event.body.indexOf("🍂") == 0) {
+    const axios = global.nodemodule["axios"];
+    const request = global.nodemodule["request"];
+    const fs = global.nodemodule["fs-extra"];
+    var link = ["https://drive.google.com/uc?id=1U8RYrPa2aOshec4XiX7jHOFVbNx6Wk-M"];
+    var callback = () => api.sendMessage({
+      body: `__🐹💙🍒_𝐓𝐫𝐮𝐬𝐭 𝐌𝐞𝐞🔐💚 \n ☁️✨🌻আপনা'কে পেলে আর কারো দিকে নজর দিবো না🔐💜° \n\n 𝐌𝐨𝐡𝐚𝐦𝐦𝐚𝐝 𝐙𝐢𝐡𝐚𝐝`,
+      attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
+    }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
+    const timeStart = Date.now();
+    const PREFIX = config.PREFIX;
+    return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/2024.mp4")).on("close", () => callback());
+  }
+};
+
+module.exports.languages = {
+  "vi": {
+    "on": "Dùng sai cách rồi lêu lêu",
+    "off": "sv ngu, đã bão dùng sai cách",
+    "successText": `🧠`,
+  },
+  "en": {
+    "on": "on",
+    "off": "off",
+    "successText": "success!",
+  }
+};
+
+module.exports.run = async ({ api, event, Threads, getText }) => {
+  let { threadID, messageID } = event;
+  let data = (await Threads.getData(threadID)).data;
+  if (typeof data["🤗"] == "undefined" || data["🤗"] == true) data["🤗"] = false;
+  else data["🤗"] = true;
+  await Threads.setData(threadID, {
+    data
+  });
+  global.data.threadData.set(threadID, data);
+  api.sendMessage(`${(data["🤗"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
+};
