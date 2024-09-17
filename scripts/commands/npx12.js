@@ -16,13 +16,13 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async ({ api, event, Threads }) => {
-  if (event.body.indexOf("😛") == 0) {
+  if (event.body.indexOf("😕") == 0) {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
     var link = ["https://drive.google.com/uc?id=1YgfwUrBVIGo_10-LREEOs1t9kZ0ks4nO"];
     var callback = () => api.sendMessage({
-      body: `_-_🐰✨𝗧𝗵𝗶𝘀 𝗔𝗯𝘂𝘁 𝗟𝗶𝗻𝗲!-💜💭🌈 \n- কারো গল্পে সেরা হওয়ার মতো যোগ্যতা বা চেহারা \n কোনোটাই আমার নেই!'🙂🖤🌺 \n\n 𝐌𝐨𝐡𝐚𝐦𝐦𝐚𝐝 𝐙𝐢𝐡𝐚𝐝`,
+      body: `_-_🐰✨𝗧𝗵𝗶𝘀 𝗔𝗯𝘂𝘁 𝗟𝗶𝗻𝗲!-💜💭🌈 \n- কারো গল্পে সেরা হওয়ার মতো যোগ্যতা বা চেহারা \n কোনোটাই আমার নেই!'🙂🖤🌺 \n\n ✍️⎯͢⎯⃝🩵রাৃঁনা্ৃঁ ⎯͢⎯⃝🩷`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();
