@@ -128,7 +128,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("এই তো আমি এখানে🙋‍♂️", threadID);
    };
  
-    if ((event.body.toLowerCase() == "sabbir") || (event.body.toLowerCase() == " Sabbir")) {
+    if ((event.body.toLowerCase() == "Shopon") || (event.body.toLowerCase() == "Sabbir")) {
      return api.sendMessage(" এটা আমার রানা বস এর বন্ধু লাগে 🥰", threadID);
    };
    
@@ -221,7 +221,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("কিরে সালাম দিতে কষ্ট হয়😡\nকষ্ট হলে দিস না🙂\n তাউ পাপ কামাই করিস না🙂", threadID);
    };
   
-   if ((event.body.toLowerCase() == "কেমন আছেন") || (event.body.toLowerCase() == "কেমন আছো")) {
+   if ((event.body.toLowerCase() == "Kemn aso") || (event.body.toLowerCase() == "কেমন আছো")) {
      return api.sendMessage("Hmm..আলহামদুলিল্লাহ অনেক ভালো আছি তুমি কেমন আছো 🥰😻", threadID);
    };
   
@@ -229,7 +229,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("Damn you, shame on hahaha :>>, still asking", threadID);
    };
 
-   if ((event.body.toLowerCase() == "খাওয়া দাওয়া করছো") || (event.body.toLowerCase() == "খাইছো")) {
+   if ((event.body.toLowerCase() == "খাওয়া দাওয়া করছো") || (event.body.toLowerCase() == "khaiso")) {
      return api.sendMessage("~একজন রোবট আমি খাওয়া-দাওয়া করতে পারি না ", threadID);
    };
 
@@ -242,7 +242,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
    };
 
    if ((event.body.toLowerCase() == "I Love you") || (event.body.toLowerCase() == "I love you")) {
-     return api.sendMessage("Hmm... বস JIHAD তোমাকে ভালোবাসে😇😻", threadID);
+     return api.sendMessage("Hmm... বস RANA ও তোমাকে ভালোবাসে😇😻", threadID);
    };
 
   if ((event.body.toLowerCase() == "ummah") || (event.body.toLowerCase() == "উম্মাহ😽")) {
@@ -261,8 +261,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("Hmm... ওইদিকে কেউ নজর দিবি না। ওইটা আমার শালী লাগে 😇😻", threadID);
    };
 
-   if ((event.body.toLowerCase() == "does the bot have a brand") || (event.body.toLowerCase() == "does the bot fall")) {
-     return api.sendMessage("Yes <3", threadID);
+   if ((event.body.toLowerCase() == "Jumma mubarak") || (event.body.toLowerCase() == "Jumma")) {
+     return api.sendMessage("ꖴؖؖؖؖؖؖؖؖؖꔰ⃟❤️জুম্মা🦋ꕬ⃢ꖴؖؖؖؖؖؖؖؖؖꔰ⃟ꖴؖؖؖؖؖؖؖؖؖমোবারকꔰ⃟ꔹꕬ⃢💖ꖴؖؖؖؖؖؖؖؖ", threadID);
    };
   
   if (event.body.indexOf("বট") == 0 || (event.body.indexOf("রোবট") == 0)) {
