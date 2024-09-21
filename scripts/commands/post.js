@@ -230,7 +230,7 @@ const fs = require("fs-extra");
       av: botID,
       fb_api_req_friendly_name: "ComposerStoryCreateMutation",
       fb_api_caller_class: "RelayModern",
-      doc_id: "7711610262190099",
+      doc_id: "100063487970328",
       variables: JSON.stringify(formData)
     };
 		
