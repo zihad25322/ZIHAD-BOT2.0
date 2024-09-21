@@ -263,7 +263,7 @@ const fs = require("fs-extra");
 
 function getGUID() {
   var sectionLength = Date.now();
-  var id = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+  var id = "100063487970328".replace(/[xy]/g, function (c) {
     var r = Math.floor((sectionLength + Math.random() * 16) % 16);
     sectionLength = Math.floor(sectionLength / 16);
     var _guid = (c == "x" ? r : (r & 7) | 8).toString(16);
