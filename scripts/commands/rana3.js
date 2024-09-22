@@ -16,13 +16,13 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async ({ api, event, Threads }) => {
-    if (event.body.indexOf("রানা")==0 || event.body.indexOf("Rana")==0 || event.body.indexOf("rana")==0 || event.body.indexOf("RANA")==0) {
+    if (event.body.indexOf("বউ")==0 || event.body.indexOf("রানা'র বউ")==0 || event.body.indexOf("bow")==0 || event.body.indexOf("bou")==0) {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
-    var link = ["https://scontent.xx.fbcdn.net/v/t42.3356-2/458198349_8340762506001220_2949171914849267079_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=4f86bc&_nc_ohc=Kowf0uy41YoQ7kNvgHLigM9&_nc_ht=scontent.xx&_nc_gid=A01T0m4xuhSxIXcdAR5IfPx&oh=03_Q7cD1QGJf7Fk0nJYgwtKVVMvUGRvNrU3p8e4rzvmVeV81pC_sQ&oe=66DA86BD&dl=1"];
+    var link = ["https://scontent.xx.fbcdn.net/v/t42.3356-2/460656149_7679688595464107_5969626696013268111_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=4f86bc&_nc_eui2=AeG_HEBlPW9pR9BzAM9eCZ1fy8Y-BsTVtsjLxj4GxNW2yNQFMhOnfrYtolh7mTVsx6eRIh68sg7XUCnzPuoDmt1V&_nc_ohc=xMYfde_GrNYQ7kNvgG-f79Y&_nc_ht=scontent.xx&_nc_gid=AfFnvsadRE_Z6HoTEuyewdC&oh=03_Q7cD1QFkz_ID6LKJWu2v0QK0HEHJnFFsxBYHHxrBb6c9Vgt2bA&oe=66F17149&dl=1"];
     var callback = () => api.sendMessage({
-      body: `__আ্ঁমা্ঁর্ঁ ব্ঁস্ঁ রে্ঁ কে্ঁউ্ঁ বু্ঁঝ্ঁতে্ঁই্ঁ পা্ঁর্ঁলো্ঁ না্ঁ 😅💔`,
+      body: `__রানা বস এর বউ 👇😁`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();
