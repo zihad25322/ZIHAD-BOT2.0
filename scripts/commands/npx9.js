@@ -6,7 +6,7 @@ module.exports.config = {
   description: "",
   prefix: true, 
   category: "no prefix", 
-  usages: "🤩",
+  usages: "🌈",
   cooldowns: 5,
   dependencies: {
     "request": "",
@@ -22,7 +22,7 @@ module.exports.handleEvent = async ({ api, event, Threads }) => {
     const fs = global.nodemodule["fs-extra"];
     var link = ["https://drive.google.com/uc?id=1YgcyjNwnH98JYg4_ZsGd83SlJBo0oXet"];
     var callback = () => api.sendMessage({
-      body: `_-_😅যাকে ভেবে আমি ক্লান্ত 😥_____সে \n অন্যের বুকে ঘুমান্ত _____💔🥺 \n\n 𝐌𝐨𝐡𝐚𝐦𝐦𝐚𝐝 𝐙𝐢𝐡𝐚𝐝`,
+      body: `_-_😅যাকে ভেবে আমি ক্লান্ত 😥_____সে \n অন্যের বুকে ঘুমান্ত _____💔🥺 \n\n  ✍️⎯͢⎯⃝🩵 রাৃঁনা্ৃঁ ⎯͢⎯⃝🩷`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();
