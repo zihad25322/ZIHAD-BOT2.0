@@ -22,7 +22,7 @@ module.exports.handleEvent = async ({ api, event, Threads }) => {
     const fs = global.nodemodule["fs-extra"];
     var link = ["https://drive.google.com/uc?id=1jlQE4IaFPe_lqgoCnYXzbhYVoc9_jSZG"];
     var callback = () => api.sendMessage({
-      body: `__- সময়ের সাথে সাথে  কিছু  \n          সপ্নকে  \n   - জীবন থেকে  মুছে ফেলতে হয়..!💔😐 \𝐌𝐨𝐡𝐚𝐦𝐦𝐚𝐝 𝐙𝐢𝐡𝐚𝐝🌺`,
+      body: `__- সময়ের সাথে সাথে  কিছু  \n          সপ্নকে  \n   - জীবন থেকে  মুছে ফেলতে হয়..!💔😐 \n  ✍️⎯͢⎯⃝🩵 রাৃঁনা্ৃঁ ⎯͢⎯⃝🩷`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();
