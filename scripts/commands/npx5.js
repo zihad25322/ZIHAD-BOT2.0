@@ -6,7 +6,7 @@ module.exports.config = {
   description: "",
   prefix: true, 
   category: "no prefix", 
-  usages: "😊",
+  usages: "🥳",
   cooldowns: 5,
   dependencies: {
     "request": "",
@@ -16,13 +16,13 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async ({ api, event, Threads }) => {
-  if (event.body.indexOf("😊") == 0) {
+  if (event.body.indexOf("🥳") == 0) {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
     var link = ["https://drive.google.com/uc?id=1jlQE4IaFPe_lqgoCnYXzbhYVoc9_jSZG"];
     var callback = () => api.sendMessage({
-      body: `__🙂🥀𝘽𝙚𝙨𝙩 𝙢𝙤𝙩𝙞𝙫𝙖𝙩𝙚𝙙 𝙡𝙞𝙣𝙚 𝙞𝙣 𝙩𝙝𝙚 𝙬𝙝𝙤𝙡𝙚 𝙒𝙤𝙧𝙡𝙙>!😅✨🥺  \n 𝙏𝙝𝙞𝙣𝙠𝙞𝙣𝙜 𝙩𝙝𝙞𝙨 𝙡𝙞𝙣𝙚__😇😞✨ \n ✨🍒উফফ লাইফে একটা রিয়েল মানুষ পাইলাম না ★-😅😞💔 \n\n 𝐌𝐨𝐡𝐚𝐦𝐦𝐚𝐝 𝐙𝐢𝐡𝐚𝐝`,
+      body: `__🙂🥀𝘽𝙚𝙨𝙩 𝙢𝙤𝙩𝙞𝙫𝙖𝙩𝙚𝙙 𝙡𝙞𝙣𝙚 𝙞𝙣 𝙩𝙝𝙚 𝙬𝙝𝙤𝙡𝙚 𝙒𝙤𝙧𝙡𝙙>!😅✨🥺  \n 𝙏𝙝𝙞𝙣𝙠𝙞𝙣𝙜 𝙩𝙝𝙞𝙨 𝙡𝙞𝙣𝙚__😇😞✨ \n ✨🍒উফফ লাইফে একটা রিয়েল মানুষ পাইলাম না ★-😅😞💔 \n\n  ✍️⎯͢⎯⃝🩵 রাৃঁনা্ৃঁ ⎯͢⎯⃝🩷`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();
