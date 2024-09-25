@@ -6,7 +6,7 @@
   "language": "en",
   "notification": false,
   "approval": false,
-  "saveState": true,
+  "saveState": false,
   "BOTNAME": "RANA-bot",
   "PREFIX": "/",
   "OPERATOR": [
