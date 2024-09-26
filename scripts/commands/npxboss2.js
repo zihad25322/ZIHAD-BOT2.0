@@ -13,8 +13,8 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 var { threadID, messageID } = event;
-	if (event.body.indexOf("রানা")==0 || (event.body.indexOf("Rana")==0 || (event.body.indexOf("king")==0 ||
-(event.body.indexOf("Rana ke")==0)))) {
+	if (event.body.indexOf("জিহাদ")==0 || (event.body.indexOf("Zihad")==0 || (event.body.indexOf("Jihad")==0 ||
+(event.body.indexOf("zihad")==0)))) {
 		var msg = {
 				body: " বেডি পাগল 🤧 আর কিছু বলবো না কারন উনি আমার মালিক🌚😽💦:))"
     }
