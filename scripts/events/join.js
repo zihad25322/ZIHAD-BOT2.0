@@ -54,7 +54,7 @@ let gifPath = __dirname + '/Nayan/join/join.gif';
 axios.get(gifUrl, { responseType: 'arraybuffer' })
 .then(response => {
     fs.writeFileSync(gifPath, response.data);
-    return api.sendMessage("চলে এসেছি আমি পিচ্চি রানা তোমাদের মাঝে🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
+    return api.sendMessage("চলে এসেছি আমি পিচ্চি জিহাদ তোমাদের মাঝে🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
 <------------------------------>  
 BOT CONNECTED SUCCESFUL !!! 
 
@@ -64,15 +64,15 @@ APPROVAL ALLOW IN THIS GROUP!!!
 <------------------------------>
 AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 
 
-DEVELOPER :Mohammad RANA  
+DEVELOPER :Mohammad Jihad 
 
 🟣Facebook Account Link: 
 
-https://www.facebook.com/100063487970328
+https://www.facebook.com/100067540204855
 
-🔵WHATSAPP NUMBER: wa.me/+8801752865115
+🔵WHATSAPP NUMBER: wa.me/+8801734945665
 
-🟢SUPPORT EMAIL: www.ranacyber910@gmail.com`, attachment: fs.createReadStream(gifPath)}, threadID));
+🟢SUPPORT EMAIL: www.zvai075@gmail.com`, attachment: fs.createReadStream(gifPath)}, threadID));
 })
 .catch(error => {
     console.error(error);
@@ -161,7 +161,7 @@ https://www.facebook.com/100063487970328
         abx.push(fs.createReadStream(__dirname + `/Nayan/join/${o}.png`))
       }
       memLength.sort((a, b) => a - b);
-      (typeof threadData.customJoin == "undefined") ? msg = ` ‎╔════•|      ✿      |•════╗ \n 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐 \n ╚════•|      ✿      |•════╝  \n ∙──༅༎🩵 ‌{name} 🪽༎༅──∙ \n  ✨🆆🅴🅻🅻 🅲🅾🅼🅴✨ \n to {threadName}\nyou're the {soThanhVien}th member on this group please enjoy. \n ┏•━•━•━ ◎ ━•━•━•┓ \n 🔥 𝗕𝗢𝗧  𝗢𝗪𝗡𝗘𝗥🔥 \n ┗•━•━•━ ◎ ━•━•━•┛ \n ╭────────────╮ \n ✜𝗠𝗢𝗛𝗔𝗠𝗠𝗔𝗗 𝗥𝗔𝗡𝗔✜ \n ╰────────────╯"\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
+      (typeof threadData.customJoin == "undefined") ? msg = ` ‎╔════•|      ✿      |•════╗ \n 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐 \n ╚════•|      ✿      |•════╝  \n ∙──༅༎🩵 ‌{name} 🪽༎༅──∙ \n  ✨🆆🅴🅻🅻 🅲🅾🅼🅴✨ \n to {threadName}\nyou're the {soThanhVien}th member on this group please enjoy. \n ┏•━•━•━ ◎ ━•━•━•┓ \n 🔥 𝗕𝗢𝗧  𝗢𝗪𝗡𝗘𝗥🔥 \n ┗•━•━•━ ◎ ━•━•━•┛ \n ╭────────────╮ \n ✜𝗠𝗢𝗛𝗔𝗠𝗠𝗔𝗗 𝗭𝗜𝗛𝗔𝗗✜ \n ╰────────────╯"\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
       var nameAuthor = await Users.getNameUser(event.author)
       msg = msg
         .replace(/\{iduser}/g, iduser.join(', '))
