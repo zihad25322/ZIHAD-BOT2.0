@@ -1,5 +1,5 @@
 module.exports.config = Object.freeze({
-  name: "otp",
+  name: "sms",
   version: "1.0.1",
   permission: 2,
   credits: "Alif",
