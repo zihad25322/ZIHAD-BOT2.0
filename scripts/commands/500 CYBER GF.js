@@ -41,7 +41,7 @@ module.exports.config = {
 module.exports.handleEvent = async ({ api, event, Threads }) => {
   const content = event.body ? event.body : '';
     const body = content.toLowerCase();
-  if (body.startsWith("gf daw")) {
+  if (body.startsWith("gf de") {
     const rahad = [
       "___ღ❥︎🦋💚ツ༉এই নে তোরে Gf দিছি তাও লুচ্চামি করা বন্ধ কর ꨄ︎⁂༄🤟🤟🖤\n\n https://www.facebook.com/ERROR.KING.ZIHAD\n\nCreate  :✜𝗠𝗢𝗛𝗔𝗠𝗠𝗔𝗗 𝗭𝗜𝗛𝗔𝗗✜",
 
