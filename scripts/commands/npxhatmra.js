@@ -1,13 +1,13 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "👍",
+  name: "😘",
   version: "1.0.1",
   permssion: 0,
   prefix: true,
   credits: "Nayan", 
   description: "hihihihi",
   category: "no prefix",
-  usages: "🖕",
+  usages: "🥰",
     cooldowns: 5, 
 };
 
@@ -16,13 +16,13 @@ module.exports.handleEvent = async function({ api, event, client, __GLOBAL }) {
   const axios = require('axios')
   const vid = (
     await axios.get(
-      'https://drive.google.com/uc?id=1DIpp7frCXzeLww8vJFURAjcqGXvwvlGo',
+      'https://drive.google.com/file/d/1bfs8jry0oiW_X2HO3SSYinWSgmJHmKRh/view?usp=drivesdk',
       { responseType: 'stream' }
     )
   ).data;
-  if (event.body.indexOf("👍")==0 || event.body.indexOf("👎")==0 || event.body.indexOf("💪")==0 || event.body.indexOf("💪")==0) {
+  if (event.body.indexOf("jihad")==0 || event.body.indexOf("oi")==0 || event.body.indexOf("jan")==0 || event.body.indexOf("hi")==0) {
     var msg = {
-        body: "~ ইমরান বস এর গ্রুপে হাত মারা নিষেধ ..!!😭🥀",
+        body: "~ আমার বস এর একটা গার্লফ্রেন্ড নাই..!!😭🥀",
         attachment: vid
       }
       api.sendMessage( msg, threadID, messageID);
