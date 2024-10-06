@@ -3,26 +3,16 @@ const fs = require("fs");
 const request = require("request");
 
 const link = [
-  "https://i.imgur.com/YZHtq60.mp4",
-  "https://i.imgur.com/1IeHri1.mp4",
-  "https://i.imgur.com/jQgBFcT.mp4",
-  "https://i.imgur.com/pbxDY0g.mp4",
-  "https://i.imgur.com/ADebnuP.mp4",
-  "https://i.imgur.com/3ZlqMPF.mp4",
-  "https://i.imgur.com/OtT6YTF.mp4",
-  "https://i.imgur.com/YzrnBAe.mp4",
-  "https://i.imgur.com/Q5EGM9J.mp4",
-  "https://i.imgur.com/IqwB8UU.mp4",
-  "https://i.imgur.com/p5dA98S.mp4",
-  "https://i.imgur.com/ZRcIYF9.mp4",
-  "https://i.imgur.com/Dt8xSXU.mp4",
-  "https://i.imgur.com/lmfiBRp.",
-  "https://i.imgur.com/vHmIR2a.mp4",
-  "https://i.imgur.com/PIHFTTz.mp4",
-  "https://i.imgur.com/BQOw4V2.mp4",
-  "https://i.imgur.com/Is9sLgx.mp4",
-  "https://i.imgur.com/FkB05ez.mp4",
-  "https://i.imgur.com/ZHFe1XF.mp4"
+  "https://i.imgur.com/pQtISDE.mp4",
+  "https://i.imgur.com/VoeI04o.mp4",
+  "https://i.imgur.com/xDO06A0.mp4",
+  "https://i.imgur.com/WeNzYtN.mp4",
+  "https://i.imgur.com/OsYMk2I.mp4",
+  "https://i.imgur.com/fhRwmh4.mp4",
+  "https://i.imgur.com/Zb0WBmf.mp4",
+  "https://i.imgur.com/dNcH27P.mp4",
+  "https://i.imgur.com/cxnPITE.mp4",
+  "https://i.imgur.com/ep7ODMF.mp4",
 ];
 
 module.exports.config = {
