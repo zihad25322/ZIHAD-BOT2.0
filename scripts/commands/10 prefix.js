@@ -20,13 +20,13 @@ module.exports.config = {
 module.exports.handleEvent = async ({ api, event }) => {
   if (isEnable == "true"){
   const dipto2 = event.body ? event.body.toLowerCase() : '';
-    const GP = "🤍✨𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗✨🤍";
+    const GP = "🩷✨𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗✨🩷";
      let d1PInfo = await api.getThreadInfo(event.threadID);
   let diptoName = d1PInfo.threadName;
     var time = moment.tz("Asia/Dhaka").format("LLLL");
-  const text = `╭•┄┅═══❁🌺❁═══┅┄•╮\n${GP}\n╰•┄┅═══❁🌺❁═══┅┄•╯\n\n\n𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 : 𝗭𝗜𝗛𝗔𝗗-𝗕𝗢𝗧 \n\n𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗 : ｢ ${global.config.PREFIX} ｣\n\n𝐑𝐎𝐁𝐎𝐓 𝐂𝐌𝐃: ｢ ${client.commands.size} ｣\n\n𝐓𝐈𝐌𝐄 : ${time}\n\n\n𝐆𝐑𝐎𝐔𝐏 𝐍𝐀𝐌𝐄: ${diptoName}\n`
+  const text = `╭•┄┅═══❁🩷🩵❁═══┅┄•╮\n${GP}\n╰•┄┅═══❁🩷🩵❁═══┅┄•╯\n\n\n𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 : 𝗭𝗜𝗛𝗔𝗗-𝗕𝗢𝗧 \n\n𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗 : ｢ ${global.config.PREFIX} ｣\n\n𝐑𝐎𝐁𝐎𝐓 𝐂𝐌𝐃: ｢ ${client.commands.size} ｣\n\n𝐓𝐈𝐌𝐄 : ${time}\n\n\n𝐆𝐑𝐎𝐔𝐏 𝐍𝐀𝐌𝐄: ${diptoName}\n`
   //const text2 = text[Math.floor(Math.random() * text.length)];
-const imgur = ["https://i.imgur.com/7tUwItr.mp4",               "https://i.imgur.com/Qky4DLk.mp4",    "https://i.imgur.com/dDtDOaQ.mp4",  "https://i.imgur.com/yoMHJC4.mp4",  "https://i.imgur.com/OXOg1MT.mp4",  "https://i.imgur.com/A9sSrhk.mp4",  "https://i.imgur.com/mWguxte.mp4", "https://i.imgur.com/jhzYV7S.mp4",  "https://i.imgur.com/i2EW0X5.mp4",  "https://i.imgur.com/2LP5lZ4.mp4"]
+const imgur = ["https://i.imgur.com/7tUwItr.mp4",               "https://i.imgur.com/fhuNZP7.jpeg",    "https://i.imgur.com/dDtDOaQ.mp4",  "https://i.imgur.com/yoMHJC4.mp4",  "https://i.imgur.com/OXOg1MT.mp4",  "https://i.imgur.com/A9sSrhk.mp4",  "https://i.imgur.com/mWguxte.mp4", "https://i.imgur.com/jhzYV7S.mp4",  "https://i.imgur.com/i2EW0X5.mp4",  "https://i.imgur.com/2LP5lZ4.mp4"]
   const link = imgur[Math.floor(Math.random() * imgur.length)];
   const res = await dipto.get(link, { responseType: 'arraybuffer' })
 const ex = path.extname(link);
