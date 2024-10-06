@@ -26,7 +26,7 @@ const media = (
     )
   ).data;
 
-	if (body.indexOf("😚")==0 || body.indexOf("bos")==0 || body.indexOf("jihad")==0 || body.indexOf("oi")==0 || body.indexOf("👍")==0 || body.indexOf("sona")==0 || body.indexOf("jan")==0 || body.indexOf("baby")==0 || body.indexOf("🥵")==0 || body.indexOf("admin")==0) {
+	if (body.indexOf("😚")==0 || body.indexOf("bos")==0 || body.indexOf("জান")==0 || body.indexOf("oi")==0 || body.indexOf("boss")==0 || body.indexOf("sona")==0 || body.indexOf("jan")==0 || body.indexOf("baby")==0 || body.indexOf("🥵")==0 || body.indexOf("hi")==0) {
 		var msg = {
 				body: "👅👄_কিরে খাবি আমার বসস জিহাদ কে .!🙈🥵",
 				attachment: media
