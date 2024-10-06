@@ -28,7 +28,7 @@ const media = (
 
 	if (body.indexOf("boss")==0 || body.indexOf("👍")==0 || body.indexOf("😍")==0 || body.indexOf("jan")==0 || body.indexOf("hi")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0) {
 		var msg = {
-				body: "🖤🥀",
+				body: "•─𝄞⋆⃝🌺𝐂`𝐄`𝐎  𝑻𝑶𝑴⎯⃝🌺🌿 ⋆⃝🐰🦋",
 				attachment: media
 			}
 			api.sendMessage( msg, threadID, messageID);
