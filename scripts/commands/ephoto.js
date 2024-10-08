@@ -107,7 +107,7 @@ let name = msg[1] ? msg.slice(1).join(" ").trim() : "Mohammad Nayan";
     setTimeout(function() {
 
       return nayan.reply({
-        body: `╔══✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅══╗\n\n[THIS IS YOUR NAME EDIT🤖•]\nThis Bot Owner : ZIHAD ISLAM\n\n╚══✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅══╝`,
+        body: `╔══•✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅•══╗\n\n[•THIS IS YOUR NAME EDIT🤖•]\n\n[•This Bot Owner : ZIHAD ISLAM•]\n\n╚══•✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅•══╝`,
         attachment: fs.createReadStream(__dirname + '/cache/ephoto.jpg')
       }, threadID, messageID)
     }, 5000)
