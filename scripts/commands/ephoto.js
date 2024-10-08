@@ -17,17 +17,17 @@ module.exports = {
 start: async function({ nayan, events, args, NAYAN }) {
 
   if (!NAYAN) {
-    return nayan.reply(`[âŒ] Unsupported this file your bot`, events.threadID);
+    return nayan.reply(`[❌] Unsupported this file your bot`, events.threadID);
   }
 
-  NAYAN.react("â³ï¸")
+  NAYAN.react("⏳️")
   const { messageID, threadID } = events;
   const fs = require("fs");
   const axios = require("axios");
   const request = require("request");
 
   const prompt = args.join(" ");
-  if (!args[0]) return nayan.reply(`ðŸ”°Use ${global.config.PREFIX}${this.config.name} [no.] [text]\nðŸ”°Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\nðŸ”¥Total Edit limit 50...`, threadID, messageID);
+  if (!args[0]) return nayan.reply(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\n🔥Total Edit limit 50...`, threadID, messageID);
 
 
   const content = args.join(" ");
@@ -100,21 +100,21 @@ let name = msg[1] ? msg.slice(1).join(" ").trim() : "Mohammad Nayan";
 
   const link = data.url;
   const rqs = request(encodeURI(`${link}`));
-   NAYAN.react("âœ…")
+   NAYAN.react("✅")
   rqs.pipe(file);  
   file.on('finish', () => {
 
     setTimeout(function() {
 
       return nayan.reply({
-        body: `â THIS IS YOUR NAME EDIT âœŒï¸\n\n___________________________________\n\nâ This Bot Name : ${global.config.BOTNAME} ðŸ¤–\nâ This Bot Owner : Mohammad Zihad\nâ Your Input Name : ${name}\n\n___________________________________`,
+        body: `╔══✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅══╗\n\n[THIS IS YOUR NAME EDIT🤖•]\nThis Bot Owner : ZIHAD ISLAM\n\n╚══✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅══╝`,
         attachment: fs.createReadStream(__dirname + '/cache/ephoto.jpg')
       }, threadID, messageID)
     }, 5000)
   })
     } catch (err) {
-   NAYAN.react("âŒ")
-    nayan.reply(`ðŸ”°Use ${global.config.PREFIX}${this.config.name} [no.] [text]\nðŸ”°Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\nðŸ”¥Total Edit limit 50...`, events.threadID, events.messageID);  
+   NAYAN.react("❌")
+    nayan.reply(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\n🔥Total Edit limit 50...`, events.threadID, events.messageID);  
    }
 }
 } 
