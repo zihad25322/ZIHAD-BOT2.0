@@ -1,39 +1,60 @@
-const axios = require('axios');
+const axios = require("axios");
+const baseApiUrl = async () => {
+  const base = await axios.get(
+    `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
+  );
+  return base.data.api;
+};
 
 module.exports.config = {
   name: "gpt",
   version: "1.0",
-  permission: 0,
-  credits: "Islamick Cyber Chat",
-  prefix: true,
-  description: "Cyber Gpt",
-  category: "General",
-  cooldowns: 2,
+  hasPermssion: 0,
+  credits: "Dipto",
+  description: "gemeini ai",
+  usePrefix: true,
+  commandCategory: "google",
+  cooldowns: 5,
 };
 
-module.exports.run = async ({ api, event, args }) => {
-  try {
-    const question = args.join(' ');
-
-    if (!question) {
-      return api.sendMessage("আপনার প্রশ্ন টি gpt লিখে অ্যাড করুন: 📝", event.threadID);
+module.exports.run = async function ({ api, args, event }) => {
+    const prompt = args.join(" ");
+    //---- Image Reply -----//
+    if (event.type === "message_reply") {
+      var t = event.messageReply.attachments[0].url;
+      try {
+        const response = await axios.get(
+          `${await baseApiUrl()}/gemini?prompt=${encodeURIComponent(prompt)}&url=${encodeURIComponent(t)}`,
+        );
+        const data2 = response.data.dipto;
+        api.sendMessage(data2, event.threadID, event.messageID);
+      } catch (error) {
+        console.error("Error:", error.message);
+        api.sendMessage(error, event.threadID, event.messageID);
+      }
     }
-
-    const response = await axios.get(`https://mostakim-api.onrender.com/gpt4?ask=${question}&id=25527373`);
-
-    if (response.data.error) {
-      return api.sendMessage("Oops! The AI encountered an error. Please try again later.", event.threadID);
-    }
-
-    const answer = response.data.Mostakim;
-
-    if (answer) {
-      api.sendMessage(`${global.config.BOTNAME}\n𝐓𝐡𝐢𝐬 𝐢𝐬 𝐦𝐲 𝐀𝐧𝐬𝐰𝐞𝐫🙆‍♂️😌\n\n${answer}`, event.threadID);
+    //---------- Message Reply ---------//
+    else if (!prompt) {
+      return api.sendMessage(
+        "Please provide a prompt or message reply",
+        event.threadID,
+        event.messageID,
+      );
     } else {
-      api.sendMessage("There's something wrong. Please try again...", event.threadID);
+      try {
+        const respons = await axios.get(
+          `${await baseApiUrl()}/gemini?prompt=${encodeURIComponent(prompt)}`,
+        );
+        const message = respons.data.dipto;
+        api.sendMessage(message, event.threadID, event.messageID);
+      } catch (error) {
+        console.error("Error calling Gemini AI:", error);
+        api.sendMessage(
+          `Sorry, there was an error processing your request.${error}`,
+          event.threadID,
+          event.messageID,
+        );
+      }
     }
-  } catch (error) {
-    console.error('Error fetching response:', error);
-    api.sendMessage("Error fetching response.", event.threadID);
-  }
+  },
 };
