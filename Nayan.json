@@ -6,18 +6,18 @@
   "language": "en",
   "notification": false,
   "approval": false,
-  "saveState": false,
-  "BOTNAME": "一 J ɩ ʜ ʌ ɗ",
+  "saveState": true,
+  "banMsg": false,
+  "adminOnlyMsg": false,
+  "BOTNAME": "ZIHAD-BOT",
   "PREFIX": "/",
   "OPERATOR": [
     "100067540204855",
-    "100063487970328",
-    "61557930632937"
+    ""
   ],
   "ADMINBOT": [
     "100067540204855",
-    "100063487970328",
-    "61557930632937"
+    ""
   ],
   "OWNER": ["100000959749712"], 
   "APPROVED": [],
