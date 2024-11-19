@@ -27,13 +27,13 @@ start: async function({ nayan, events, args, NAYAN }) {
   const request = require("request");
 
   const prompt = args.join(" ");
-  if (!args[0]) return nayan.reply(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\n🔥Total Edit limit 50...`, threadID, messageID);
+  if (!args[0]) return nayan.reply(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 Zihad\n\n🔥Total Edit limit 50...`, threadID, messageID);
 
 
   const content = args.join(" ");
 const msg = content.split(" ");
 const number = msg[0].trim();
-let name = msg[1] ? msg.slice(1).join(" ").trim() : "Mohammad Nayan";
+let name = msg[1] ? msg.slice(1).join(" ").trim() : "Mohammad RANA";
 
   const {ephoto} = require('nayan-server')
 
@@ -107,14 +107,14 @@ let name = msg[1] ? msg.slice(1).join(" ").trim() : "Mohammad Nayan";
     setTimeout(function() {
 
       return nayan.reply({
-        body: `╔══•✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅•══╗\n\n[•THIS IS YOUR NAME EDIT🤖•]\n\n[•This Bot Owner : ZIHAD ISLAM•]\n\n╚══•✅𝐙𝐈𝐇𝐀𝐃-𝐁𝐎𝐓✅•══╝`,
+        body: `❐ THIS IS YOUR NAME EDIT ✌️\n\n___________________________________\n\n❐ This Bot Name : ${global.config.BOTNAME} 🤖\n❐ This Bot Owner : Mohammad Zihad😘\n❐ Your Input Name : ${name}\n\n___________________________________`,
         attachment: fs.createReadStream(__dirname + '/cache/ephoto.jpg')
       }, threadID, messageID)
     }, 5000)
   })
     } catch (err) {
    NAYAN.react("❌")
-    nayan.reply(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\n🔥Total Edit limit 50...`, events.threadID, events.messageID);  
+    nayan.reply(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 rana\n\n🔥Total Edit limit 50...`, events.threadID, events.messageID);  
    }
 }
-} 
+}
