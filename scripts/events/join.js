@@ -48,12 +48,14 @@ module.exports.run = async function({ api, event, Users }) {
   if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     //api.changeNickname(`𝗕𝗢𝗧 ${(!global.config.BOTNAME) ? "Buddy" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 
-    let gifUrl = 'https://i.imgur.com/vTkjyZo.gif';
+    let gifUrl = 'https://i.postimg.cc/SNQXkB0y/lv-0-20231018174834.gif';
 let gifPath = __dirname + '/Nayan/join/join.gif';
 
 axios.get(gifUrl, { responseType: 'arraybuffer' })
 .then(response => {
     fs.writeFileSync(gifPath, response.data);
+  if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
+    api.changeNickname(`[ ${global.config.PREFIX} ] • ➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
     return api.sendMessage("⎯͢⎯⃝🤍জা্ঁন্ঁ মো্ঁই্ আ্ঁই্ঁসা্ঁ প্ঁর্ঁছি্ঁ জিঁঁহা্ঁদ্ঁএ্ঁর্ঁ ব্ঁট্ঁ তো্ঁমা্ঁদে্ঁর্ঁ সা্ঁথে্ঁ আঁলঁগাঁ পিঁরিঁতঁ কঁরঁতেঁ..🤭⎯͢⎯⃝😁", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\n🌱𝗔𝘀𝘀𝗮𝗹𝗮𝗺𝘂 𝗮𝗹𝗮𝗶𝗸𝘂𝗺🥀🌼
 <------------------------------>  
 𝗕𝗼𝘁 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝗳𝘂𝗹 !!! 
@@ -78,7 +80,7 @@ https://www.facebook.com/100067540204855
 ❁ 𝗘𝗺𝗮𝗶𝗹: zvai075@gmail.com
 
 ✿ 𝗪𝗣: m.me/+8801734945665`, attachment: fs.createReadStream(gifPath)}, threadID));
-})
+  }})
 .catch(error => {
     console.error(error);
 });
