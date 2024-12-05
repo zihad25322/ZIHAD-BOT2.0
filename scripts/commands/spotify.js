@@ -25,7 +25,7 @@ start: async function({ nayan, events, args, lang }) {
     const axios = require("axios")
     const request = require("request")
     const fs = require("fs-extra")
-  const { spotify} = require('nayan-server')
+  const { spotify} = require('nayan-api-server')
     const text = args.join(" ")
     nayan.reply(`searching for ${text}`, events.threadID, events.messageID);
     const res = await spotify(`${text}`);
@@ -43,7 +43,7 @@ start: async function({ nayan, events, args, lang }) {
     allimage.push(fs.createReadStream(__dirname + "/cache/img1.mp3"));
 
     {
-        msg += `${cp}\n\n⇆ㅤ ㅤ◁ㅤ ❚❚ ㅤ▷ ㅤㅤ↻`
+        msg += `${cp}\n\n一 ɀỉꫝꪖᦔ ཐི༏ཋྀ\n⇆ㅤ ㅤ◁ㅤ ❚❚ ㅤ▷ ㅤㅤ↻`
     }
 
    nayan.reply(lang("send"), events.threadID, events.messageID)
