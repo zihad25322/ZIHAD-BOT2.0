@@ -156,7 +156,7 @@ try{
 module.exports.handleEvent = async function ({ api, event }) {
 try{
     const body = event.body ? event.body.toLowerCase() : ""
-    if(body.startsWith("bot") || body.startsWith("jan") || body.startsWith("Bot")){
+    if(body.startsWith("bot") || body.startsWith("baby") || body.startsWith("Bot")){
         const arr = body.replace(/^\S+\s*/, "")
       if(!arr) return message.reply("Yes 😀, i am here 😘")
     const a = (await axios.get(`${await baseApiUrl()}/baby?text=${encodeURIComponent(arr)}&senderID=${event.senderID}&font=1`)).data.reply;     
